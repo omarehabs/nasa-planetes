@@ -12,6 +12,7 @@ const server = http.createServer(app);
 async function startServer() {
     await connectMongo();
     await loadPlanets();
+
     await loadLaunchData();
     server.listen(PORT, () => {
         console.log('served on port ', PORT);
